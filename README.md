@@ -24,10 +24,10 @@ Het platform is volledig Nederlandstalig en gericht op een breed publiek: van be
 ## Functionaliteiten
 
 ### 🧾 Recepten indienen
-Gebruikers stellen hun recept samen via een vaste ingrediëntenlijst. Bij het indienen geven ze ook het smaakprofiel op (bijv. zoet, zuur, fruitig). Omdat gebruikers zelf recepten insturen, ontstaat automatisch een gevarieerd aanbod van alcoholvrije alternatieven voor klassieke cocktails.
+Gebruikers stellen hun recept samen via een vaste ingrediëntenlijst. Ze zeggen welke hoeveelheid ze van elk ingrediënt nodig hebben. Als er een specifieke volgorde/bereidingswijze nodig is, kunnen ze die ook opgeven. Bij het indienen geven ze ook het smaakprofiel op (bijv. zoet, zuur, fruitig). Omdat gebruikers zelf recepten insturen, ontstaat automatisch een gevarieerd aanbod van alcoholvrije alternatieven voor klassieke cocktails.
 
 ### ⭐ Beoordelen
-Andere gebruikers kunnen een recept beoordelen met een sterrenscore en een korte geschreven review.
+Andere gebruikers kunnen een recept beoordelen met een sterrenscore en een korte geschreven review. Ze kunnen ook stemmen op het smaakprofiel.
 
 ### 🔍 Filteren en zoeken
 | Filter | Omschrijving |
@@ -42,9 +42,9 @@ Op de homepage wordt wekelijks een uitgelicht recept getoond, gebaseerd op beoor
 ### 📊 Moeilijkheidsgraad
 Elk recept krijgt een duidelijke moeilijkheidsaanduiding:
 
-- 🟢 **Makkelijk** — gewoon mixen en klaar
-- 🟡 **Gemiddeld** — een beetje techniek vereist
-- 🔴 **Barista-level** — voor de echte liefhebbers
+- 🟢 **Makkelijk**: gewoon mixen en klaar
+- 🟡 **Gemiddeld**: een beetje techniek vereist
+- 🔴 **Barista-level**: voor de echte liefhebbers
 
 ### 🎖️ Badges en achievements
 Actieve gebruikers verdienen badges op basis van hun bijdragen:
@@ -77,8 +77,8 @@ Mocktail Studio heeft een speelse maar verfijnde uitstraling, geïnspireerd op d
 
 ### Typografie
 
-- **Koppen:** Poppins of Nunito — rond, vriendelijk en modern
-- **Bodytekst:** Clean sans-serif voor maximale leesbaarheid
+- **Koppen:** Poppins of Nunito; rond, vriendelijk en modern
+- **Bodytekst:** Clean sans-serif: maximale leesbaarheid
 
 ### Visuele elementen
 
@@ -108,4 +108,4 @@ De onderstaande functies zijn bewust buiten de eerste versie gehouden wegens imp
 
 ---
 
-*Mocktail Studio — Bouw je eigen drankkaart, zonder alcohol.*
+**Mocktail Studio** | *Bouw je eigen drankkaart, zonder alcohol.*
