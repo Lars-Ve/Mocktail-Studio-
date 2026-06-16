@@ -1,6 +1,6 @@
 # 🍹 Mocktail Studio
 
-Een community-gedreven platform waar gebruikers zelf mocktailrecepten insturen, ontdekken en beoordelen.
+Community-gedreven platform voor alcoholvrije drankjes.
 
 ---
 
@@ -37,22 +37,43 @@ Andere gebruikers kunnen een recept beoordelen met een sterrenscore en een korte
 | **Zoekfunctie** | Zoek op naam, ingrediënt of smaak |
 
 ### 🏆 Mocktail van de Week
-Op de homepage wordt wekelijks een uitgelicht recept getoond, gebaseerd op beoordelingen en populariteit.
+Op de homepage wordt wekelijks een uitgelicht recept getoond:
+- Kandidaten: gepubliceerde recepten met minimaal 1 review en rating >= 3.5.
+- Score combineert kwaliteit, review-trust, favorites en een verkenningsboost voor nieuwere / minder vaak beoordeelde recepten.
+- Resultaat wordt per week vastgelegd in `weekly_features`.
 
 ### 📊 Moeilijkheidsgraad
-Elk recept krijgt een duidelijke moeilijkheidsaanduiding:
-
+Er zijn 3 moeilheidslevels:
 - 🟢 **Makkelijk**: gewoon mixen en klaar
 - 🟡 **Gemiddeld**: een beetje techniek vereist
 - 🔴 **Barista-level**: voor de echte liefhebbers
 
+- De submitter geeft initieel label.
+- Dat telt voor 3 stemmen
+- Elke community-vote telt als 1.
+- Het label met hoogste score wordt `effective_difficulty`.
+
 ### 🎖️ Badges en achievements
 Actieve gebruikers verdienen badges op basis van hun bijdragen:
-
 - Eerste recept ingediend
 - 10 beoordelingen gegeven
 - Recept van de Week gewonnen
 - En nog veel meer...
+
+- Elke belangrijke actie schrijft een event naar `domain_events`.
+- Badge processor leest events en kent badges toe zonder business logic hard in de request flow te veren.
+
+### Smaakprofiel
+- Submitter kiest smaakprofiel (zoet/zuur/bitter/fruitig/kruidig/fris).
+- Gebruikers kunnen ook stemmen op het smaakprofiel.
+- Submitter-tags tellen dubbel (`source=submitter`, factor 2.0).
+- Community-votes tellen enkel (`factor 1.0`).
+- Per recept berekenen we percentages per smaak.
+- Smaken met >= 18% verschijnen als dominante tags.
+
+### Shake to Surprise
+Geeft een random recept volgens deze regels:
+- Sluit recepten uit die echt slecht presteren: `avg_rating < 2.5` wanneer er minstens 3 reviews zijn.
 
 ### ❤️ Favorieten
 Gebruikers kunnen recepten opslaan in hun persoonlijke favorietenlijst voor later gebruik.
@@ -104,7 +125,20 @@ De onderstaande functies zijn bewust buiten de eerste versie gehouden wegens imp
 
 ## 🚀 Status
 
-> 🛠️ In ontwikkeling — eerste versie nog niet uitgebracht.
+> 🛠️ In ontwikkeling: eerste versie gemaakt (nog niet openbaar)
+
+---
+
+## Run lokaal (om te testen)
+```bash
+cd backend
+python -m venv .venv
+source venv/bin/activate  # (recommended)
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+Open daarna `http://127.0.0.1:8000`.
 
 ---
 
